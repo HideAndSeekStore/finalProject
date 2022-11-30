@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+
+<mapper namespace="EmpDAO" >
+	<select id="list" resultType="EmpDTO">
+		select e.*, d.deptno, d.dname, d.loc from emp e join dept d on e.deptno = d.deptno order by hiredate desc
+	</select>
+</mapper>
